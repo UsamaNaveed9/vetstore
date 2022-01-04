@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-12-24 11:39:47.151146",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_section",
+  "title",
+  "naming_series",
+  "supplier_name",
+  "contact_mobile",
+  "column_break1",
+  "posting_date",
+  "posting_time",
+  "due_date",
+  "col_break4",
+  "items",
+  "total_amount_details_section",
+  "total_quantity",
+  "column_break_13",
+  "total_amount",
+  "grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "options": "fa fa-user"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "{supplier_name}",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "ACC-PINV-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "supplier_name",
+   "fieldtype": "Link",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_global_search": 1,
+   "label": "Supplier Name",
+   "oldfieldname": "customer_name",
+   "oldfieldtype": "Data",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "supplier_name.mobile_no",
+   "fieldname": "contact_mobile",
+   "fieldtype": "Data",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "oldfieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Date",
+   "no_copy": 1,
+   "oldfieldname": "posting_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Posting Time",
+   "no_copy": 1,
+   "oldfieldname": "posting_time",
+   "oldfieldtype": "Time",
+   "print_hide": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Payment Due Date",
+   "no_copy": 1,
+   "oldfieldname": "due_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "fieldname": "col_break4",
+   "fieldtype": "Section Break",
+   "hide_days": 1,
+   "hide_seconds": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Items",
+   "oldfieldname": "entries",
+   "oldfieldtype": "Table",
+   "options": "Purchase Invoice Items",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount_details_section",
+   "fieldtype": "Section Break",
+   "label": "Total Amount Details"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Int",
+   "label": "Total Quantity"
+  }
+ ],
+ "icon": "fa fa-file-text",
+ "links": [
+  {
+   "group": "Reference",
+   "link_doctype": "POS Invoice",
+   "link_fieldname": "consolidated_invoice"
+  }
+ ],
+ "modified": "2021-12-24 11:46:28.941834",
+ "modified_by": "Administrator",
+ "module": "Vetstore",
+ "name": "Purchase Invoices",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "posting_date, due_date, supplier_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "supplier_name",
+ "title_field": "title",
+ "track_changes": 1,
+ "track_seen": 1
+}

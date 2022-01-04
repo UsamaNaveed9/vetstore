@@ -173,3 +173,4 @@ user_data_fields = [
 # 	"vetstore.auth.validate"
 # ]
 
+fixtures = ["Custom Field"]

@@ -1,0 +1,38 @@
+{
+ "allow_roles": [
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Sales Manager"
+  }
+ ],
+ "creation": "2021-12-20 20:59:48.118363",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "mm",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2021-12-20 20:59:48.118363",
+ "modified_by": "Administrator",
+ "module": "Vetstore",
+ "name": "VET Store",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Create a Supplier"
+  },
+  {
+   "step": "Create an Item"
+  },
+  {
+   "step": "Data import"
+  },
+  {
+   "step": "Create a Customer"
+  }
+ ],
+ "subtitle": "store",
+ "success_message": "Store",
+ "title": "Veterinary store"
+}

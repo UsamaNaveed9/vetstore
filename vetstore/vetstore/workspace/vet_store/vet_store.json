@@ -1,0 +1,58 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2021-12-20 20:23:10.259683",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends": "Vet Store",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "sell",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Vet Store",
+ "links": [],
+ "modified": "2021-12-20 21:10:40.285380",
+ "modified_by": "Administrator",
+ "module": "Vetstore",
+ "name": "Vet Store",
+ "owner": "Administrator",
+ "pin_to_bottom": 1,
+ "pin_to_top": 0,
+ "restrict_to_domain": "Retail",
+ "shortcuts": [
+  {
+   "doc_view": "",
+   "label": "Items List",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Purchase Invoice",
+   "link_to": "Purchase Invoice",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Customer List",
+   "link_to": "Customer",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Supplier List",
+   "link_to": "Supplier",
+   "type": "DocType"
+  }
+ ]
+}

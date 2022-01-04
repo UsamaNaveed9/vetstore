@@ -1,0 +1,274 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-12-24 11:02:16.504885",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_section",
+  "title",
+  "naming_series",
+  "customer_name",
+  "contact_mobile",
+  "column_break1",
+  "posting_date",
+  "posting_time",
+  "due_date",
+  "col_break4",
+  "items",
+  "total_amount_details_section",
+  "total_quantity",
+  "column_break_13",
+  "total_amount",
+  "total_discount_amount",
+  "total_gross_amount",
+  "grand_total",
+  "payment_terms_section",
+  "received_amount",
+  "remaining_amount",
+  "column_break_22",
+  "receiving_date",
+  "next_receiving_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "options": "fa fa-user"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "{customer_name}",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Title",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "oldfieldname": "naming_series",
+   "oldfieldtype": "Select",
+   "options": "ACC-SINV-.YYYY.-\nACC-SINV-RET-.YYYY.-",
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_global_search": 1,
+   "label": "Customer Name",
+   "oldfieldname": "customer_name",
+   "oldfieldtype": "Data",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break1",
+   "fieldtype": "Column Break",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "oldfieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "in_list_view": 1,
+   "label": "Date",
+   "no_copy": 1,
+   "oldfieldname": "posting_date",
+   "oldfieldtype": "Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Posting Time",
+   "no_copy": 1,
+   "oldfieldname": "posting_time",
+   "oldfieldtype": "Time",
+   "print_hide": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Payment Due Date",
+   "no_copy": 1,
+   "oldfieldname": "due_date",
+   "oldfieldtype": "Date"
+  },
+  {
+   "fetch_from": "customer_name.mobile_no",
+   "fieldname": "contact_mobile",
+   "fieldtype": "Data",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "col_break4",
+   "fieldtype": "Section Break",
+   "hide_days": 1,
+   "hide_seconds": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "Items",
+   "oldfieldname": "entries",
+   "oldfieldtype": "Table",
+   "options": "Sale Invoice Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount_details_section",
+   "fieldtype": "Section Break",
+   "label": "Total Amount Details"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "total_discount_amount",
+   "fieldtype": "Currency",
+   "label": "Total Discount Amount"
+  },
+  {
+   "fieldname": "total_gross_amount",
+   "fieldtype": "Currency",
+   "label": "Total Gross Amount"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Data",
+   "label": "Total Quantity"
+  },
+  {
+   "fieldname": "payment_terms_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "received_amount",
+   "fieldtype": "Currency",
+   "label": "Received Amount"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "receiving_date",
+   "fieldtype": "Date",
+   "label": "Receiving Date"
+  },
+  {
+   "fieldname": "next_receiving_date",
+   "fieldtype": "Date",
+   "label": "Next Receiving Date"
+  },
+  {
+   "fieldname": "remaining_amount",
+   "fieldtype": "Currency",
+   "label": "Remaining Amount"
+  }
+ ],
+ "icon": "fa fa-file-text",
+ "links": [
+  {
+   "group": "Reference",
+   "link_doctype": "POS Invoice",
+   "link_fieldname": "consolidated_invoice"
+  }
+ ],
+ "modified": "2022-01-04 21:22:16.293319",
+ "modified_by": "Administrator",
+ "module": "Vetstore",
+ "name": "Sale Invoice",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "All"
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "posting_date, due_date, customer_name",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "customer_name",
+ "title_field": "title",
+ "track_changes": 1,
+ "track_seen": 1
+}
